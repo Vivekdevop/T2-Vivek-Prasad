@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-const analytics = require("../controllers/analyticsController");
+// ✅ Import the analytics controller
+const analyticsController = require("../controllers/analyticsController");
 
-router.get("/stats",analytics.getStats);
+// ✅ Register the route
+router.get("/dashboard", analyticsController.getAnalytics);
 
 module.exports = router;
